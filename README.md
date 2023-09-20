@@ -1,2 +1,3 @@
-# PyLife-Python_For_Everyday
-Pylife: Embrace Python in Everyday Scenarios! 🚀  Discover Python Projects, Practical Files, and Key concepts curated to elevate your daily routine. Let's infuse your life with a dash of Pythonic Magic. Join the journey! 🐍✨
+# Arithmetic Formatter
+
+This is the boilerplate for the Arithmetic Formatter project. Instructions for building your project can be found at https://www.freecodecamp.org/learn/scientific-computing-with-python/scientific-computing-with-python-projects/arithmetic-formatter
