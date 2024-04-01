@@ -1,1 +1,39 @@
+# Hello There Coding Freaks, Glad meeting you all Here. Diving into the Problem.. :)
+# This Problem can be solved in many Ways depending on the Time Complexities being accepted,
+# Here, I have Two ways of Solving or Approaching this Problem,
+"""
+1. Using Hash Map/Dictionary - Best Time Complexity.
+2. Using Double for loop - Worst Time Complexity.
 
+# Now Let's Proceed Furthur,
+
+#APPROACH 1 : Using HashMaps/ Dictionaries.
+class Solution:
+   def twoSum(self,nums:List[int],target:int) -> List[int]:
+       seen = {}
+       for i,num in enumerate (nums):
+             if target - num in seen:
+                   return ([seen[target-num],i])
+             elif num not in seen:
+                   seen[num]=i
+
+# RunTime Complexity : Around 40 to 60ms - O(n) Best Time Complexity.
+
+"""
+APPROACH 2 : Using Double for Loop.
+class Solution:
+   def twoSum(self,nums:List[int],target:int) -> List[int]:
+      for i in range(len(nums)-1):
+         for j in range(i+1,len(nums)):
+             if nums[i] + nums[j] == target:
+                  return([i,j])
+
+# RunTime Complexity : Around 6000ms - O(n^2) Comparitively Very Slow - Worst Time Complexity.
+"""
+
+# If you find any more Interesting Ways of solving this Problem, Kindly Text me.
+# For Furthur Clarifications in Logic and Explanation of the Code, Feel Free to DM me :),
+"""
+Linkedin : sathi-surya-ganesh-reddy-9b080925b
+Email    : ssuryaganesh20@gmail.com
+"""
