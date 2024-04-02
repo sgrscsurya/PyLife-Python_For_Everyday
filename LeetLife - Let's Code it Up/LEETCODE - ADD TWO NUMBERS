@@ -30,7 +30,17 @@ The number of nodes in each linked list is in the range [1, 100].
 0 <= Node.val <= 9
 It is guaranteed that the list represents a number that does not have leading zeros.
 """
+# Hey There Guys, Okay! Let's get started solving the 2nd Problem this week. Let's Dive right in.
+# This Problem can be solved in an easy approach where the Time Complexity is Complexity is comparatively less and Can be solved in Direct method understanding the Problem.
+# Here, I have this one way of Solving or Approaching this Problem,
 
+"""
+1. Using Direct Method - Best Time Complexity.
+"""
+
+# Now Let's Proceed Furthur,
+
+#APPROACH 1 : Using Direct Method.
 #PROGRAM CODE :
 class Solution:
     def addTwoNumbers(self, l1:ListNode, l2:ListNode) -> ListNode:
@@ -50,3 +60,10 @@ class Solution:
              l1 = l1.next if l1 else None
              l2 = l2.next if l2 else None
         return sample.next
+
+# If you find any more Interesting Ways of solving this Problem, Kindly Text me.
+# For Furthur Clarifications in Logic and Explanation of the Code, Feel Free to DM me :),
+"""
+Linkedin : https://www.linkedin.com/in/sathi-surya-ganesh-reddy-9b080925b
+Email    : ssuryaganesh20@gmail.com
+"""
