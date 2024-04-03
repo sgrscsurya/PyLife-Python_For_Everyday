@@ -1,1 +1,69 @@
+#PROBLEM : LONGEST SUBSTRING WITHOUT REPEATING CHARACTERS.
+"""
+Given a string s, find the length of the longest 
+substring without repeating characters.
 
+Example 1:
+Input: s = "abcabcbb"
+Output: 3
+Explanation: The answer is "abc", with the length of 3.
+
+Example 2:
+Input: s = "bbbbb"
+Output: 1
+Explanation: The answer is "b", with the length of 1.
+
+Example 3:
+Input: s = "pwwkew"
+Output: 3
+Explanation: The answer is "wke", with the length of 3.
+
+Notice that the answer must be a substring, "pwke" is a subsequence and not a substring.
+
+Constraints:
+0 <= s.length <= 5 * 104
+s consists of English letters, digits, symbols and spaces.
+"""
+#Hey,There Guys😃 This Problem Can be solved with Two Approaches where both Ways are of Best Time Complexities.
+# --> APPROACH 1 : Using Iteration.
+# --> APPROACH 2 : Using Direct Method. I prefer APPROACH 2 because of it's Best time Complexity.
+#Let's Dive into Solving and Understanding.
+
+#APPROACH 1 : USING ITERATION METHOD.
+
+"""
+PROGRAM :
+class Solution:
+    def lengthofLongestSubstring(self,s:str)->int:
+        if len(s)==0:
+            return 0
+        map = {}
+        max_length = start = 0
+        for i in range(len(s)):
+            if s[i] in map and start <= map[s[i]]:
+                start = map[s[i]] + 1
+            else:
+                max_length = max(max_length, i-start+i)
+            map[s[i]]=i
+        return (max_length)
+"""
+
+#APPROACH 2 : USING DIRECT METHOD.
+
+#PROGRAM :
+class Solution:
+    def lengthofLongestSubstring(self,s:str)->int:
+         temp = ans = ""
+         for i in s:
+             if i in temp:
+                temp=temp[temp.index(i) + 1:]
+             temp+=i
+             ans = temp if len(temp)>len(ans) else ans
+         return len(ans)
+
+# If you find any more Interesting Ways of solving this Problem, Kindly Text me.
+# For Furthur Clarifications in Logic and Explanation of the Code, Feel Free to DM me :),
+"""
+Linkedin : https://www.linkedin.com/in/sathi-surya-ganesh-reddy-9b080925b
+Email    : ssuryaganesh20@gmail.com
+"""
