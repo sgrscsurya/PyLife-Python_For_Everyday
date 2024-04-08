@@ -62,4 +62,36 @@ Constraints:
 s consists of English letters (lower-case and upper-case), digits (0-9), ' ', '+', '-', and '.'.
 """
 
-PROBLEM CODE :
+# PROBLEM CODE :
+class Solution:
+    def myAtoi(self, s: str) -> int:
+        result = 0
+        temp = 2**31
+        sign = 1
+        signFlag = False
+        for c in range(len(s)):
+            if s[c]=='+' and not signFlag:
+                signFlag=True
+            elif s[c]=='-' and not signFlag:
+                signFlag=True
+                sign=-1
+            elif s[c] == ' ' and (c == 0 or not signFlag):
+                pass
+            elif s[c] in '0123456789':
+                result = result*10+ int(s[c])
+                signFlag=True
+            else:
+                break
+        if sign -1 and sign*result <sign*temp:
+            return sign*temp
+        elif sign == 1 and result > temp - 1:
+            return temp-1
+        else:
+            return sign*result
+
+# If you find any more Interesting Ways of solving this Problem, Kindly Text me.
+# For Furthur Clarifications in Logic and Explanation of the Code, Feel Free to DM me :),
+"""
+Linkedin : https://www.linkedin.com/in/sathi-surya-ganesh-reddy-9b080925b
+Email    : ssuryaganesh20@gmail.com
+"""
