@@ -31,3 +31,27 @@ It is guaranteed for each appearance of the character '*', there will be a previ
 """
 
 #PROGRAM CODE :
+class Solution:
+    def isMatch(self, s: str, p: str) -> bool:
+        cache = {}
+        def dfs(i,j):
+            if (i,j) in cache:
+                return cache [(i,j)]
+            if i>=len(s) and j>=len(p):
+                return True
+            if j>= len(p):
+                return False
+            match = i<len(s) and (s[i]==p[j] or p[j]==".")
+            if (j+1) < len(p) and p[j+1]=="*":
+                cache[(i,j)] = (dfs(i,j+2) or (match and dfs(i+1, j)))
+            else:
+                cache[(i,j)] = dfs(i+1,j+1)
+            return cache[(i,j)]
+        return dfs(0,0)
+
+# If you find any more Interesting Ways of solving this Problem, Kindly Text me.
+# For Furthur Clarifications in Logic and Explanation of the Code, Feel Free to DM me :),
+"""
+Linkedin : https://www.linkedin.com/in/sathi-surya-ganesh-reddy-9b080925b
+Email    : ssuryaganesh20@gmail.com
+"""
